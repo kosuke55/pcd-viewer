@@ -1,0 +1,7 @@
+*~
+pcd_viewer/pcd_viewer
+*.egg/
+*.egg-info/
+*.pyc
+\#*\#
+.\#*
