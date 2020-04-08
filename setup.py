@@ -10,12 +10,12 @@ setup_requires = []
 install_requires = ['open3d>=0.9.0']
 
 setup(
-    name="pcd_viewer",
+    name="viewer_3d",
     version=version,
-    description="Just launch open3d viewer with command",
+    description="Display 3D objects using an external library.",
     author="kosuke55",
     author_email="kosuke.tnp@gmail.com",
-    url="https://github.com/kosuke55/pcd-viewer",
+    url="https://github.com/kosuke55/viewer-3d",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     license="MIT",
@@ -34,7 +34,7 @@ setup(
     packages=find_packages(),
     entry_points={
         'console_scripts':
-        ['pcd-viewer=pcd_viewer.apps.view:main']},
+        ['v3=viewer_3d.apps.view:main']},
     setup_requires=setup_requires,
     install_requires=install_requires,
 )
