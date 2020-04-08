@@ -7,7 +7,10 @@ from setuptools import setup
 version = "0.0.1"
 
 setup_requires = []
-install_requires = ['open3d>=0.9.0']
+install_requires = [
+    'open3d>=0.9.0',
+    'scikit-robot',
+]
 
 setup(
     name="viewer_3d",
