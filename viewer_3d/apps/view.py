@@ -28,7 +28,7 @@ def main():
         pcd = o3d.io.read_point_cloud(args.input)
         o3d.visualization.draw_geometries([pcd])
 
-    elif 'ply' in ext.lower() or 'stl' in ext.lower():
+    elif 'off' in ext.lower() or'ply' in ext.lower() or 'stl' in ext.lower():
         obj = skrobot.model.Link()
         obj._visual_mesh = trimesh.load(args.input)
         viewer = skrobot.viewers.TrimeshSceneViewer()

@@ -26,6 +26,7 @@ For reference, KITTI pcd has 4 channels and Nuscene pcd has 5 channels.
 
 Or for object file,  
 ```
+v3 -i input.off  
 v3 -i input.ply  
 v3 -i input.stl  
 v3 -i input.urdf  
