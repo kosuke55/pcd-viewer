@@ -12,7 +12,10 @@ pip install -e .
 ```
 
 ## Supported formats  
-`.pcd .bin .ply .stl .urdf`  
+PointCloud  
+`.bin .pcd`  
+Object  
+`.off .ply .stl .urdf`  
 
 ## Examples
 For point cloud file,  
