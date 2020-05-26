@@ -44,7 +44,8 @@ def main():
         else:
             o3d.visualization.draw_geometries([pcd])
 
-    elif 'off' in ext.lower() or'ply' in ext.lower() or 'stl' in ext.lower():
+    elif 'obj' in ext.lower() or 'off' in ext.lower() \
+         or 'ply' in ext.lower() or 'stl' in ext.lower():
         obj = skrobot.model.Link()
         obj._visual_mesh = trimesh.load(args.input)
         viewer = skrobot.viewers.TrimeshSceneViewer()

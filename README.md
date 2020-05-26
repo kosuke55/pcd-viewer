@@ -15,7 +15,7 @@ pip install -e .
 PointCloud  
 `.bin .pcd`  
 Object  
-`.off .ply .stl .urdf`  
+`.obj .off .ply .stl .urdf`  
 
 ## Examples
 For point cloud file,  
@@ -29,6 +29,7 @@ For reference, KITTI pcd has 4 channels and Nuscene pcd has 5 channels.
 
 Or for object file,  
 ```
+v3 -i input.obj  
 v3 -i input.off  
 v3 -i input.ply  
 v3 -i input.stl  
