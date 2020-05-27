@@ -46,8 +46,7 @@ def main():
 
     elif 'obj' in ext.lower() or 'off' in ext.lower() \
          or 'ply' in ext.lower() or 'stl' in ext.lower():
-        obj = skrobot.model.Link()
-        obj._visual_mesh = trimesh.load(args.input)
+        obj = skrobot.models.MeshLink(args.input)
         viewer = skrobot.viewers.TrimeshSceneViewer()
         viewer.add(obj)
         viewer.show()
