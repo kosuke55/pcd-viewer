@@ -50,24 +50,14 @@ def main():
         print(obj.visual_mesh)
         viewer = skrobot.viewers.TrimeshSceneViewer()
         viewer.add(obj)
-        viewer.show()
-        try:
-            while not viewer.has_exit:
-                pass
-        except KeyboardInterrupt:
-            pass
+        viewer._init_and_start_app()
 
     elif 'urdf' in ext.lower():
         obj = skrobot.models.urdf.RobotModelFromURDF(
             urdf_file=args.input)
         viewer = skrobot.viewers.TrimeshSceneViewer()
         viewer.add(obj)
-        viewer.show()
-        try:
-            while not viewer.has_exit:
-                pass
-        except KeyboardInterrupt:
-            pass
+        viewer._init_and_start_app()
 
 
 if __name__ == '__main__':
