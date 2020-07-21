@@ -1,5 +1,6 @@
 import argparse
 import os
+import os.path as osp
 
 import numpy as np
 import open3d as o3d
@@ -54,7 +55,7 @@ def main():
 
     elif 'urdf' in ext.lower():
         obj = skrobot.models.urdf.RobotModelFromURDF(
-            urdf_file=args.input)
+            urdf_file=osp.abspath(args.input))
         viewer = skrobot.viewers.TrimeshSceneViewer()
         viewer.add(obj)
         viewer._init_and_start_app()
