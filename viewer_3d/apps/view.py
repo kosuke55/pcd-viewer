@@ -11,8 +11,8 @@ import trimesh
 def main():
     parser = argparse.ArgumentParser(
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument('--input', '-i', type=str,
-                        help='Input filename', required=True)
+    parser.add_argument('input', type=str,
+                        help='Input filename')
     parser.add_argument('--channel', '-c', type=int,
                         help='Channel of pcd data.',
                         default=4)

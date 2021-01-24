@@ -20,8 +20,8 @@ Object
 ## Examples
 For point cloud file,  
 ```
-v3 -i input.pcd  
-v3 -i input.pcd.bin -c 5  
+v3 input.pcd  
+v3 input.pcd.bin -c 5  
 ```
 
 To visualize binary data, you need to specify the channel(default=4).  
@@ -29,9 +29,9 @@ For reference, KITTI pcd has 4 channels and Nuscene pcd has 5 channels.
 
 Or for object file,  
 ```
-v3 -i input.obj  
-v3 -i input.off  
-v3 -i input.ply  
-v3 -i input.stl  
-v3 -i input.urdf  
+v3 input.obj  
+v3 input.off  
+v3 input.ply  
+v3 input.stl  
+v3 input.urdf  
 ```
