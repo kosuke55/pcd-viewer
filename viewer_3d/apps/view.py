@@ -1,5 +1,4 @@
 import argparse
-import os
 import os.path as osp
 
 import numpy as np
@@ -17,7 +16,7 @@ def main():
                         help='Channel of pcd data.',
                         default=4)
     args = parser.parse_args()
-    root, ext = os.path.splitext(args.input)
+    root, ext = osp.splitext(args.input)
 
     viewer = skrobot.viewers.TrimeshSceneViewer()
 
