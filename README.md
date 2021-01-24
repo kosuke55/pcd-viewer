@@ -1,7 +1,7 @@
 # VIEWER 3D
 
 Display 3D objects using an external library.  
-This app just launches the Open3D or sckit-robot(trimesh) viewer with a command.  
+This app just launches the sckit-robot(trimesh) viewer with a command.  
 
 ## Install
 
