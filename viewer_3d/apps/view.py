@@ -1,6 +1,7 @@
 import argparse
 import os.path as osp
 
+import matplotlib.pyplot as plt
 import numpy as np
 import open3d as o3d
 import skrobot
@@ -31,7 +32,11 @@ def main():
             pcd = o3d.io.read_point_cloud(args.input)
 
         if np.asarray(pcd.colors).size == 0:
-            colors = np.full_like(np.asarray(pcd.points), 0.5)
+            points = np.asarray(pcd.points)
+            z_max = np.max(points[:, 2])
+            z_min = np.min(points[:, 2])
+            cm = plt.get_cmap('jet')
+            colors = cm((points[:, 2] - z_min) / (z_max - z_min))[:, :3]
             pcd.colors = o3d.utility.Vector3dVector(colors[:, :3])
 
         trimesh_pc = trimesh.PointCloud(
