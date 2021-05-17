@@ -30,6 +30,10 @@ def main():
         elif 'pcd' in ext.lower():
             pcd = o3d.io.read_point_cloud(args.input)
 
+        if np.asarray(pcd.colors).size == 0:
+            colors = np.full_like(np.asarray(pcd.points), 0.5)
+            pcd.colors = o3d.utility.Vector3dVector(colors[:, :3])
+
         trimesh_pc = trimesh.PointCloud(
             np.asarray(
                 pcd.points), np.asarray(
