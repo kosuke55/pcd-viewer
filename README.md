@@ -5,6 +5,7 @@ This app just launches the sckit-robot(trimesh) viewer with a command.
 
 ## Install
 
+recommended python version: 3.8.5
 ```
 git clone https://github.com/kosuke55/viewer-3d.git  
 cd viewer-3d  
